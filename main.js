@@ -3,6 +3,8 @@ leftWristX=0;
 leftWristY=0;
 rightWristX=0;
 rightWristY=0;
+scorerightWrist=0;
+scoreleftWrist=0;
 InNumberleftWristY=0;
 remove_decimals=0;
 volume=0;
@@ -73,8 +75,8 @@ function play(){
 function gotposes(results){
 if(results.length>0){
     console.log(results);
-    scorerightWrist=results[0].pose.keypoints[10].scorerightWrist;
-    scoreleftWrist=results[0].pose.keypoints[9].scoreleftWrist;
+    scorerightWrist=results[0].pose.keypoints[10].score;
+    scoreleftWrist=results[0].pose.keypoints[9].score;
     console.log("scoreleftWrist="+scoreleftWrist+"scoreleftWrist="+scoreleftWrist);
     leftWristX=results[0].pose.leftWrist.x;
     leftWristY=results[0].pose.leftWrist.y;
